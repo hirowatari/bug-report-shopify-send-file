@@ -57,6 +57,8 @@ export default defineConfig({
     proxy: {
       "^/(\\?.*)?$": proxyOptions,
       "^/api(/|(\\?.*)?$)": proxyOptions,
+      "^/authenticated_file(/|(\\?.*)?$)": proxyOptions,
+      "^/unauthenticated_file(/|(\\?.*)?$)": proxyOptions,
     },
   },
 });

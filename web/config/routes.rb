@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   # If you are adding routes outside of the /api path, remember to also add a proxy rule for
   # them in web/frontend/vite.config.js
 
+  get "/authenticated_file", to: "foo#authenticated_file"
+  get "/unauthenticated_file", to: "foo#unauthenticated_file"
+
   # Any other routes will just render the react app
   match "*path" => "home#index", via: [:get, :post]
 end
